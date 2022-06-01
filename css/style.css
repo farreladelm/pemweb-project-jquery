@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 300px;
+    min-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+body {
+    z-index: -999;
+}
+
+.container{
+    height: 100vh;
+    background-color: #1A3841;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+/* PAGE 1 SVG */
+.custom-shape-divider-bottom-1652882865 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1652882865 svg {
+    position: relative;
+    display: block;
+    width: calc(230% + 1.3px);
+    height: 326px;
+}
+
+.custom-shape-divider-bottom-1652882865 .shape-fill {
+    fill: #60AEA6;
+}
+
+/* PAGE 2 SVG */
+.custom-shape-divider-top-1652891352 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1652891352 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 452px;
+}
+
+.custom-shape-divider-top-1652891352 .shape-fill {
+    fill: #60AEA6;
+}
+
+/* PAGE 3 SVG */
+
+.custom-shape-divider-bottom-1652921012 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+}
+
+.custom-shape-divider-bottom-1652921012 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 178px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1652921012 .shape-fill {
+    fill: #60AEA6;
+}
+
+
+/*  PAGE 4 SVG */
+
+.page4-svg {
+    width: 300%;
+    height: 700px;
+    background-color: #60AEA6;
+    position: absolute;
+    top: -500px;
+    left: -400px;
+    transform: rotate(5deg);
+    overflow: hidden;
+}
+.portfolio-txt {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Anton', sans-serif;
+    transition: all .5s ease;
+}
+
+.portfolio-txt h1 {
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    
+}
+
+/* NAVIGATION */
+
+.navbar {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A3841;
+    padding: 5px 5px;
+    border-radius: 35px;
+    margin-bottom: 5px;
+}
+
+.nav-page {
+    background-color: #60AEA6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px;
+    text-decoration: none;
+}
+.nav-page i {
+    color: #1A3841;
+    font-size: 18px;
+}
+
+/* BUTTON */
+
+.btn {
+    background-color: #E7CE4D;
+    width: 220px;
+    height: 49.2px;
+    padding: 5px;
+    font-size: 1.1em;
+    color: #1A3841;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index:999;
+    clear: both;
+    transition: all .5s ease-in;
+    overflow: hidden;
+}
+
+.btn span {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .5s ease-in;
+    position: relative;
+}
+
+.btn span i {
+    color: #1A3841;
+
+}
+
+.btn p {
+    color: #1A3841;
+    font-weight: bold;
+    transition: all .5s ease-in;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn:hover p {
+    color: #1A3841;
+    width: 100%;
+}
+
+/* CONTENT */
+
+.content-container {
+    z-index: 1;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.portfolio-content .main-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.portfolio-content .main-con p {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: 80%;
+}
+.portfolio-content .main-con p span {
+    color: #E7CE4D;
+    font-size: 1.1em;
+}
+
+.active {
+    background-color: #E7CE4D;
+    transition: background-color .5s ease;
+
+}
+
+/* PAGE 2 */
+
+#profile .about-me-txt h1 {
+    color: #1A3841;
+}
+.portfolio-content .main-con .desc {
+    font-size: .8em;
+    line-height: 1.5em;
+    max-height: 500px;
+}
+
+.about-me-con {
+    background-color: #142f37df;
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+
+/* PAGE 3 */
+
+
+.portfolio-content .skill-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio-content .skill-con .skill-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.portfolio-content .skill-con .skill-section h1 {
+    margin-block: 5px;
+    font-size: 1.3em;
+}
+
+.portfolio-content .skill-con .skill-section i {
+    font-size: 3rem;
+}
+
+/* PAGE 4 */
+
+.exp-con .edu-con {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.edu-section {
+    padding: 20px;
+    min-height: 200px;
+    background-color: #142f37df;
+    border-radius: 10px;
+}
+
+.edu-section h1 {
+    font-size: 1.5em;
+
+}
+
+.edu-section p {
+    font-weight: lighter;
+    margin: 10px 0;
+    height: fit-content;
+}
+
+.edu-section .GPA {
+    color: #E7CE4D;
+}
+
+.exp-con {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+}
+
+.exp-con .exp-section {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #142f37df;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-con .exp-section h1 {
+    font-size: 1.5em;
+    color: #E7CE4D;
+    margin-bottom: 10px;
+
+}
+
+.exp-con .exp-section .apprentice {
+    margin:10px 0;
+}
+
+.edu-con .edu-section .date, .exp-con .exp-section .date {
+    font-size: .8em;
+    color: #dbdedf;
+}
+
+
+/* PAGE 5 */
+
+.portfolio-content .contact-con {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center ;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    font-weight: bold;
+    gap: 20px;
+}
+
+.portfolio-content .contact-con .contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 150px;
+    text-decoration: none;
+    background-color: #ffffff;
+    opacity: .9;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all .5s ease-in-out;
+    
+    
+}
+
+.portfolio-content .contact-con .contact-link i {
+    color: #1A3841;
+    font-size: 3em;
+    transition: all .2s ease-out;
+}
+
+.portfolio-content .contact-con .contact-link p {
+    color: #1A3841;
+    font-size: 12px;
+    transition: all .2s ease-out;
+}
+
+.portfolio-content .contact-con .cl-email {
+    pointer-events: none;
+}
+
+.portfolio-content .contact-con .contact-link:hover {
+    justify-content: center;
+}
+
+.portfolio-content .contact-con .contact-link:hover p {
+    display: none;
+}
+.portfolio-content .contact-con .contact-link:hover i {
+    font-size: 4em;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 550px) {
+    * {
+        font-size: 18px;
+    }
+
+    .portfolio-content .skill-con .skill-section {
+        margin: 20px;
+    }
+
+    .portfolio-txt {
+        margin-top: 40px;
+    }
+
+    .portfolio-txt h1 {
+        font-size: 2em;
+    }
+
+    .page4-svg {
+        height: 800px;
+    }
+
+    /* page 5 */
+
+    .portfolio-content .contact-con .contact-link {
+        width: 220px;
+        height: 220px;
+        padding: 40px 20px;
+    }
+
+    .portfolio-content .contact-con .contact-link p {
+
+        font-size: 1rem;
+
+    }
+
+    .portfolio-content .contact-con .contact-link i {
+        font-size: 5em;
+    }
+
+    .portfolio-content .contact-con .contact-link:hover i {
+        font-size: 6em;
+    }
+
+}
+@media (min-width: 1024px) {
+    img {
+        min-width: 300px;
+    }
+
+    .page4-svg {
+        height: 1100px;
+    }
+
+    .about-me-img {
+        min-width: 200px;
+    }
+    .portfolio-content .main-con .perkenalan {
+        font-size: 1.5em;
+    }
+    .portfolio-content .main-con .desc {
+        font-size: 1.1em;
+        height: 50%;
+    }
+
+    .portfolio-content {
+        width: 100%;
+        margin:  0 auto;
+    }
+    .container {
+        gap: 0;
+    }
+    .portfolio-content {
+        flex-direction: row;
+        gap: 80px;
+        width: 90%;
+        padding: 20px 100px;
+        
+    }
+    .portfolio-content .main-con {
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .portfolio-content .main-con .perkenalan {
+        text-align: left;
+    }
+    .navbar {
+        width: auto;
+        height: 100%;
+        margin-right: 20px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .portfolio-content .main-con .btn p {
+        font-size: 1rem;
+    }
+
+    /* page 2 */
+
+    .portfolio-content .about-me-con {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* PAGE 3 */
+
+    .portfolio-content .skill-con .skill-section {
+        margin: 30px;
+    }
+
+    .portfolio-content .skill-con .skill-section h1{
+        margin: 20px;
+    }
+}
+
+/* CHATBOT */
+
+.chatbot-con {
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+
+    padding: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbot-icon i {
+    font-size: 30px;
+}
+
+.chat-box {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 1000;
+    width: 400px;
+    height: 80vh;
+    background-color: #ffffff;
+    transition: all .3s ease-in;
+    transform: scaleY(0);
+    border-radius: 10px;
+
+}
+
+.chat-box.active {
+    transform: scaleY(1);
+}
+
+#chat textarea {
+    resize: none;
+    color: #1A3841;
+}
+
+#messages {
+    padding: 20px;
+}
