@@ -131,7 +131,7 @@ body {
 }
 
 .portfolio-txt h1 {
-    font-size: 1.5em;
+    font-size: 1em;
     letter-spacing: 5px;
     
 }
@@ -175,6 +175,12 @@ body {
 .nav-page i {
     color: #1A3841;
     font-size: 18px;
+}
+
+.active {
+    background-color: #E7CE4D;
+    transition: background-color .5s ease;
+
 }
 
 /* BUTTON */
@@ -268,11 +274,7 @@ body {
     font-size: 1.1em;
 }
 
-.active {
-    background-color: #E7CE4D;
-    transition: background-color .5s ease;
 
-}
 
 /* PAGE 2 */
 
@@ -446,6 +448,53 @@ body {
     font-size: 4em;
 }
 
+/* CHATBOT */
+
+.chatbot-con {
+    position: fixed;
+    right: 10px;
+    bottom: 90px;
+
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbot-icon i {
+    font-size: 30px;
+}
+
+.chat-box {
+    position: fixed;
+    right: 30px;
+    bottom: 140px;
+    z-index: 1000;
+    width: 300px;
+    min-height: 71vh;
+    background-color: #ffffff;
+    transition: all .3s ease-in;
+    transform: scaleY(0);
+    border-radius: 10px;
+
+}
+
+.chat-box.activated{
+    transform: scaleY(1);
+}
+
+i.active-i{
+    color: #E7CE4D;
+}
+
+#chat textarea {
+    resize: none;
+    color: #1A3841;
+}
+
+#messages {
+    padding: 20px;
+}
 
 
 
@@ -492,6 +541,16 @@ body {
 
     .portfolio-content .contact-con .contact-link:hover i {
         font-size: 6em;
+    }
+
+    .chatbot-con{
+        bottom: 30px;
+        right: 30px;
+    }
+    .chat-box {
+        width: 400px;
+        font-size: 15px;
+        bottom: 100px;
     }
 
 }
@@ -569,46 +628,3 @@ body {
     }
 }
 
-/* CHATBOT */
-
-.chatbot-con {
-    position: fixed;
-    right: 30px;
-    bottom: 10px;
-
-    padding: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.chatbot-icon i {
-    font-size: 30px;
-}
-
-.chat-box {
-    position: fixed;
-    right: 30px;
-    bottom: 100px;
-    z-index: 1000;
-    width: 400px;
-    height: 80vh;
-    background-color: #ffffff;
-    transition: all .3s ease-in;
-    transform: scaleY(0);
-    border-radius: 10px;
-
-}
-
-.chat-box.active {
-    transform: scaleY(1);
-}
-
-#chat textarea {
-    resize: none;
-    color: #1A3841;
-}
-
-#messages {
-    padding: 20px;
-}

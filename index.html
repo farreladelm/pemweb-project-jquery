@@ -231,36 +231,45 @@
         <div class="chatbot-icon">
             <i class="fa fa-comments"></i>
         </div>
-        <div class="chat-box">
+        <div id="chatbot-box" class="chat-box">
             <div id="chat" class="conv-form-wrapper">
                 <form action="" method="GET" class="hidden">
-                    <select data-conv-question="Hello! I'm a bot created from a HTML form. Can I show you some features? (this question comes from a select)" name="first-question">
-                        <option value="yes">Yes</option>
-                        <option value="sure">Sure!</option>
+                    <input class="hidden" type="text" name="name" data-conv-question="Hai! Sebelum lanjut ke pertanyaan, tuliskan nama anda terlebih dahulu pada kolom chat.">
+                    <select data-conv-question="Hallo, Bapak/Ibu {name}:0! Senang bisa berkenalan dengan anda. Apa yang ingin anda ketahui?" name="first-question" data-callback="storeState">
+                        <option value="aboutMe">Jelaskan diri Anda</option>
+                        <option value="chatbot">tentang chatbot</option>
                     </select>
-                    <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
-                    <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you. (note that this question doesn't expect any answer)" data-no-answer="true">
-                    <input type="text" data-conv-question="This plugin supports multi-select too. Let's see an example." data-no-answer="true">
-                    <select name="multi[]" data-conv-question="What kind of music do you like?" multiple>
-                        <option value="Rock">Rock</option>
-                        <option value="Pop">Pop</option>
-                        <option value="Country">Country</option>
-                        <option value="Classic">Classic</option>
+
+                    <div data-conv-fork="first-question">
+                        <div data-conv-case="aboutMe">
+                            <input type="text" data-conv-question="Saya masih berstatus sebagai mahasiswa tahun ke-2 dan belum memiliki pengalaman bekerja di perusahaan manapun. Saya memiliki beberapa portfolio untuk meyakinkan anda mengenai kemampuan saya dalam pemrograman." data-no-answer="true">
+                            <input type="text" data-conv-question="Saya mulai belajar mengenai pemrograman sejak 3 tahun lalu dan saya sangat tertarik terhadap pemrograman." data-no-answer="true">
+                        </div>
+                        <div data-conv-case="chatbot">
+                            <select data-conv-question="Chatbot ini dibuat dengan bantuan jquery plugin ciptaan Eduardo Thomas Koller">
+                                <option value="credit" data-callback="credit">Eduardo Thomas Koller github page</option>
+                            </select>
+                            <input type="text" data-conv-question="Plugin ini juga mendukung pemilihan lebih dari 1 pilihan. (Pilih 1 atau lebih item di bawah ini)" data-no-answer="true">
+                            <select name="multi[]" data-conv-question="Bahasa pemrograman apa yang menarik perhatian anda?" multiple>
+                                <option value="Javascript">Javascript</option>
+                                <option value="Python">Python</option>
+                                <option value="C">C</option>
+                                <option value="Golang">Golang</option>
+                            </select>
+                            <input type="text" data-conv-question="Keren sekali!" data-no-answer="true">
+                            <input data-conv-question="Plugin ini juga support dengan regex pattern lho! Coba tuliskan email pada kolom chat" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
+                            <input data-conv-question="Sekarang tuliskan sesuatu yang perlu dirahasiakan (seperti password)" type="password" data-minlength="6" id="senha" name="password" required placeholder="password">
+                        </div>
+                        
+                    </div>
+                    <select name="callbackTest" data-conv-question="Apakah Bapak/Ibu {name}:0 ingin kembali ke pertanyaan awal?">
+                        <option value="ya" data-callback="rollback">Iya</option>
+                        <option value="tidak" data-callback="restore">Tidak</option>
                     </select>
-                    <input type="text" data-conv-question="convForm also supports regex patterns. Look:" data-no-answer="true">
-                    <input data-conv-question="Type in your e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
-                    <input data-conv-question="Now tell me a secret (like a password)" type="password" data-minlength="6" id="senha" name="password" required placeholder="password">
-                    <select data-conv-question="Selects also support callback functions. For example, try one of these:">
-                            <option value="google" data-callback="google">Google</option>
-                            <option value="bing" data-callback="bing">Bing</option>
-                    </select>
-                    <select name="callbackTest" data-conv-question="You can do some cool things with callback functions. Want to rollback to the 'programmer' question before?">
-                        <option value="yes" data-callback="rollback">Yes</option>
-                        <option value="no" data-callback="restore">No</option>
-                    </select>
-                    <select data-conv-question="This is it! If you like me, consider donating! If you need support, contact me. When the form gets to the end, the plugin submits it normally, like you had filled it." id="">
-                        <option value="">Awesome!</option>
-                    </select>
+                    <select data-conv-question="Terima kasih sudah menggunakan chatbot saya. Kontak saya terdapat pada halaman terakhir website ini." id="">
+                        <option value="">Terima kasih!</option>
+                        <option value="">Baik</option>
+                    </select>             
                 </form>
             </div>
         </div>

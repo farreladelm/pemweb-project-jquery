@@ -6,6 +6,10 @@ function bing(stateWrapper, ready) {
     window.open("https://bing.com");
     ready();
 }
+function credit(stateWrapper, ready) {
+    window.open("https://github.com/eduardotkoller/convForm");
+    ready();
+}
 var rollbackTo = false;
 var originalState = false;
 function storeState(stateWrapper, ready) {
